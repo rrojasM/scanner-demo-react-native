@@ -24,6 +24,7 @@ const Barcode = () => {
     return !scan ? (
         <View style={styles.container}>
             {result && <Text>Code: {JSON.stringify(result.data)}</Text>}
+            {result && <Text>Code: {JSON.stringify(result, 2, null)}</Text>}
             <TouchableOpacity style={styles.buttonTouchable} onPress={() => setScan(true)}>
                 <Text style={styles.buttonText}>Iniciar Scanner</Text>
             </TouchableOpacity>
